@@ -23,20 +23,20 @@ title: Programmatic MCP Demo
 MCP is a standardized interface that enables AI applications to interact with a wide variety of data sources and tools in a consistent way. The architecture can be visualized as a layered graph, where the middle layer is the MCP protocol, connecting AI applications on one side and data sources/tools on the other.
 
 <div class="mermaid" markdown="0">
-%%{init: {'theme': 'base', 'themeVariables': {'clusterBkg': '#e1f5fe11', 'fontSize': '16px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '16px'}}}%%
 graph TD
-    subgraph AI_Applications ["<big><b>AI Applications & Interfaces</b></big><br/><br/>"]
+    subgraph AI_Applications ["AI Applications & Interfaces"]
         direction TB
         A1["<b>Chat Interfaces</b><br/>(Windows Copilot, ChatGPT, Claude)"]
         A2["<b>IDEs & Code Editors</b><br/>(VS Code, Visual Studio, Cursor)"]
         A3["<b>Custom .NET AI Apps</b><br/>(Semantic Kernel, .NET SDKs)"]
     end
 
-    subgraph Protocol_Layer ["<big><b>Middle Layer</b></big><br/>"]
-        MCP{{"<b>● Model Context Protocol ●</b><br/>(Standardized Interface)"}}
+    subgraph Protocol_Layer ["Model Context Protocol — Middle Layer"]
+        MCP{{"<b>● MCP ●</b><br/>(Standardized Interface)"}}
     end
 
-    subgraph Data_Tools ["<big><b>Data Sources & Tools</b></big><br/><br/>"]
+    subgraph Data_Tools ["Data Sources & Tools"]
         direction TB
         D1["<b>File System</b><br/>(Windows File I/O, UNC Shares, OneDrive)"]
         D2["<b>Databases</b><br/>(SQL Server, Azure SQL, SQLite)"]
@@ -45,16 +45,12 @@ graph TD
         D5["<b>Windows System APIs</b><br/>(WMI, Registry, Event Log, PowerShell)"]
     end
 
-    %% Bidirectional Relationships
     AI_Applications <==> MCP
     MCP <==> Data_Tools
 
-    %% Styling
     style MCP fill:#00FF00,stroke:#333,stroke-width:4px
     style AI_Applications fill:#e1f5fe,stroke:#01579b
     style Data_Tools fill:#fff3e0,stroke:#e65100
-
-    caption[Source: Derived and tailored for .NET and Windows technology from diagram at modelcontextprotocol.io / Created by Tore Aurstad]
 </div>
 
 ---
