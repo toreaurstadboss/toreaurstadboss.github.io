@@ -1,11 +1,8 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
-gem "jekyll-theme-chirpy", "~> 7.2"
+gem "jekyll", "~> 3.10"
+gem "jekyll-remote-theme"
 
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.17"
-  gem "jekyll-sitemap"
-  gem "jekyll-seo-tag", "~> 2.8"
-  gem "jekyll-include-cache"
-end
+# Windows/tzinfo fix
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "wdm", "~> 0.1", platforms: [:mingw, :mswin, :x64_mingw]
