@@ -12,7 +12,7 @@ https://toreaurstadboss.github.io/
 
 ### Choose a lecture!
 
-* [Lecture 1 - Introduction to Programming](lectures/ProgrammaticMcpDemo.md)
+* [Lecture 1 - Programmatic MCP Demo](lectures/ProgrammaticMcpDemo.md)
 
 
 ![Professor Lecturer at Cats University](assets/images/professor_lecturer_cats_university.png)

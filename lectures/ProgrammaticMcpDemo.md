@@ -6,25 +6,26 @@
 MCP is a standardized interface that enables AI applications to interact with a wide variety of data sources and tools in a consistent way. The architecture can be visualized as a layered graph, where the middle layer is the MCP protocol, connecting AI applications on one side and data sources/tools on the other.
 
 ```mermaid
-
+%%{init: {'theme': 'base', 'themeVariables': {'clusterBkg': '#e1f5fe11', 'fontSize': '16px'}}}%%
 graph TD
-    subgraph AI_Applications [<b>AI Applications & Interfaces</b>]
+    subgraph AI_Applications ["<big><b>AI Applications & Interfaces</b></big><br/><br/>"]
         direction TB
         A1["<b>Chat Interfaces</b><br/>(Windows Copilot, ChatGPT, Claude)"]
         A2["<b>IDEs & Code Editors</b><br/>(VS Code, Visual Studio, Cursor)"]
         A3["<b>Custom .NET AI Apps</b><br/>(Semantic Kernel, .NET SDKs)"]
     end
 
-    subgraph Protocol_Layer [<b>Middle Layer</b>]
+    subgraph Protocol_Layer ["<big><b>Middle Layer</b></big><br/>"]
         MCP{{"<b>● Model Context Protocol ●</b><br/>(Standardized Interface)"}}
     end
 
-    subgraph Data_Tools [<b>Data Sources & Tools</b>]
+    subgraph Data_Tools ["<big><b>Data Sources & Tools</b></big><br/><br/>"]
         direction TB
-        D1["<b>Microsoft Ecosystem</b><br/>(Graph API, SQL Server, SharePoint)"]
-        D2["<b>Google Ecosystem</b><br/>(Google Drive, Maps, BigQuery)"]
-        D3["<b>Anthropic Ecosystem</b><br/>(Claude Desktop Tools, Brave Search)"]
-        D4["<b>Local & External APIs</b><br/>(NTFS, REST Services, GitHub)"]
+        D1["<b>File System</b><br/>(Windows File I/O, UNC Shares, OneDrive)"]
+        D2["<b>Databases</b><br/>(SQL Server, Azure SQL, SQLite)"]
+        D3["<b>Microsoft Cloud APIs</b><br/>(MS Graph, SharePoint, Azure Blob Storage)"]
+        D4["<b>REST & Web APIs</b><br/>(GitHub, OpenWeather, Custom HTTP Services)"]
+        D5["<b>Windows System APIs</b><br/>(WMI, Registry, Event Log, PowerShell)"]
     end
 
     %% Bidirectional Relationships
