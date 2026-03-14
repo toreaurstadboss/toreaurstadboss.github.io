@@ -1,3 +1,9 @@
+---
+layout: page
+title: Programmatic MCP Demo
+mermaid: true
+---
+
 # Programmatic MCP Demo
 
 

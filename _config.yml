@@ -38,6 +38,10 @@ kramdown:
     block:
       line_numbers: true
 
+mermaid:
+  # Mermaid.js CDN — loaded only on pages with `mermaid: true` in front matter
+  src: https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+
 plugins:
   - jekyll-remote-theme
   - jekyll-paginate
