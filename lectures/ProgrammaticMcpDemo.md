@@ -33,7 +33,7 @@ graph TD
     end
 
     subgraph Protocol_Layer ["Model Context Protocol — Middle Layer"]
-        MCP{{"<b>● MCP ●</b><br/>(Standardized Interface)"}}
+        MCP["<b>● Model Context Protocol ●</b><br/>(Standardized Interface)"]
     end
 
     subgraph Data_Tools ["Data Sources & Tools"]
