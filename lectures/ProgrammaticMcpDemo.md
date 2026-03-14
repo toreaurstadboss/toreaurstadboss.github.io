@@ -3,8 +3,17 @@ layout: default
 title: Programmatic MCP Demo
 ---
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.1/mermaid.min.js"></script>
-<script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });</script>
+<script>
+(function() {
+  var s = document.createElement('script');
+  s.src = 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.1/mermaid.min.js';
+  s.onload = function() {
+    mermaid.initialize({ startOnLoad: false, securityLevel: 'loose' });
+    mermaid.run();
+  };
+  document.head.appendChild(s);
+})();
+</script>
 
 # Programmatic MCP Demo
 
