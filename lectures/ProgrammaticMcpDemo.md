@@ -248,6 +248,7 @@ We also do more setup with the chat client here, passing in the ANTHROPIC_API_KE
 The entire Program.cs then looks like this : 
 
 - Note that we create named http client to contact the api tools. This is done as the APIs the tools are contacting requries the client to set up a specific User Agent with a product name. 
+- There has been some trial and error to make this work in a web setup over HTTPS. Trying out MCP first using STDIO (console) client and server is much easier and it is recommended to try that route out first. The demo of mine also got a console server and client project.
 
 #### Program.cs 
 
@@ -413,3 +414,69 @@ We look at the two tools made for **Nominatim** and **Yr** APIs , the following 
  });
 
 ```
+
+It is time to look at the tools themselves next that we defined in the Program.cs 
+
+### NominatimTool 
+Looking up latitude and longitude from a geographical place is done with the tools presented below. The tool is using the Nominatim API from OpenStreetMap to look up the latitude and longitude of a given place.
+
+- Please observe that the tool defined one parameter, which the place to look up. The parameter is decorated with a Description attribute, this is used to generate metadata about the tool and its parameters which can be used by clients to understand how to use the tool. This is part of the contract of the MCP protocol.
+- The tool is defined inside a sealed class that is decorated with the [McpServerToolType] attribute, this is used to register the tool with the MCP server and to generate metadata about the tool type. 
+
+```csharp
+
+namespace WeatherServer.Tools;
+
+using ModelContextProtocol.Server;
+using System.ComponentModel;
+using WeatherServer.Common;
+
+[McpServerToolType]
+public sealed class NominatimTols
+{
+
+    public string ToolId => "OpenStreetMap Nominatim tool";
+
+    [McpServerTool(Name = "NominatimLookupLatLongForPlace"), Description("Get latitude and longitude for a place using Nominatim service of OpenStreetMap.")]
+    public static async Task<string> GetLatitudeAndLongitude(
+        IHttpClientFactory clientFactory,
+        [Description("The place to get latitude and longitude for. Will use Nominatim service of OpenStreetMap")] string place)
+    {
+        var client = clientFactory.CreateClient(WeatherServerApiClientNames.OpenStreetmapApiClientName);
+
+        using var jsonDocument = await client.ReadJsonDocumentAsync($"/search?q={Uri.EscapeDataString(place)}&format=geojson&limit=1");
+        var features = jsonDocument.RootElement.GetProperty("features").EnumerateArray();
+
+        if (!features.Any())
+        {
+            return $"No location data found for '{place}'. Try another place to query?";
+        }
+
+        var feature = features.First();
+
+        var geometry = feature.GetProperty("geometry");
+
+        var geometryType = geometry.GetProperty("type").GetString();
+
+        if (string.Equals(geometryType, "point", StringComparison.OrdinalIgnoreCase))
+        {
+            var pointCoordinates = geometry.GetProperty("coordinates").EnumerateArray();
+            if (pointCoordinates.Any())
+            {
+                return $"Latitude: {pointCoordinates.ElementAt(1)}, Longitude: {pointCoordinates.ElementAt(0)}";
+            }
+        }
+
+        return $"No location data found for '{place}'. Try another place to query?";
+    }
+
+}
+
+
+```
+
+We use *IHttpClientFactory* to create the http client that will use the right setup for accessing the Nominatim API. The client was defined inside the `Program.cs` shown above.
+
+Observe the use of Name and Description here. Here we provide both the metadata and the description that will be used by clients and the MCP protocol to understand how to use and limit usage of the tool. 
+
+Let's next look at the other tool, the one that uses the Yr API to look up weather information. 
