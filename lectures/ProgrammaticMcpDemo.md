@@ -247,6 +247,8 @@ We also do more setup with the chat client here, passing in the ANTHROPIC_API_KE
 
 The entire Program.cs then looks like this : 
 
+- Note that we create named http client to contact the api tools. This is done as the APIs the tools are contacting requries the client to set up a specific User Agent with a product name. 
+
 #### Program.cs 
 
 
@@ -388,5 +390,26 @@ namespace WeatherServer.Http
         }
     }
 }
+
+```
+
+We look at the two tools made for **Nominatim** and **Yr** APIs , the following two HTTP clients are made :
+
+
+```csharp
+
+ builder.Services.AddHttpClient(WeatherServerApiClientNames.YrApiClientName, client =>
+ {
+     client.BaseAddress = new Uri("https://api.met.no");
+     client.DefaultRequestHeaders.UserAgent.Clear();
+     client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("yrweather-mcpdemoclient2-tore-tool", "1.0"));
+ });
+
+ builder.Services.AddHttpClient(WeatherServerApiClientNames.OpenStreetmapApiClientName, client =>
+ {
+     client.BaseAddress = new Uri("https://nominatim.openstreetmap.org");
+     client.DefaultRequestHeaders.UserAgent.Clear();
+     client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("nominatim-openstreetmap-client2-api-tool", "1.0"));
+ });
 
 ```
