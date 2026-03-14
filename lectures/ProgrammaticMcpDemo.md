@@ -1,3 +1,6 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.1/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true });</script>
+
 # Programmatic MCP Demo
 
 
