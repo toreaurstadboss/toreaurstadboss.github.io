@@ -6,7 +6,7 @@ title: Programmatic MCP Demo
 <script>
 (function() {
   var s = document.createElement('script');
-  s.src = 'https://unpkg.com/mermaid@11.4.1/dist/mermaid.min.js';
+  s.src = '/assets/js/mermaid.min.js';
   s.onload = function() {
     mermaid.initialize({ startOnLoad: false, securityLevel: 'loose' });
     mermaid.run();
