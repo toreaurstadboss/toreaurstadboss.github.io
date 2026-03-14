@@ -22,7 +22,7 @@ title: Programmatic MCP Demo
 
 MCP is a standardized interface that enables AI applications to interact with a wide variety of data sources and tools in a consistent way. The architecture can be visualized as a layered graph, where the middle layer is the MCP protocol, connecting AI applications on one side and data sources/tools on the other.
 
-<div class="mermaid">
+<div class="mermaid" markdown="0">
 %%{init: {'theme': 'base', 'themeVariables': {'clusterBkg': '#e1f5fe11', 'fontSize': '16px'}}}%%
 graph TD
     subgraph AI_Applications ["<big><b>AI Applications & Interfaces</b></big><br/><br/>"]
