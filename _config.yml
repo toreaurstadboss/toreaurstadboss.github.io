@@ -1,49 +1,9 @@
-theme: jekyll-theme-chirpy
+theme: jekyll-theme-midnight
 
 title: Tore Aurstad
-tagline: Developer notes, lectures & demos
-description: >-
-  Personal GitHub Pages site by Tore Aurstad — covering .NET, AI, MCP and more.
+description: "Developer notes, lectures & demos — .NET, AI, MCP and more."
 url: "https://toreaurstadboss.github.io"
 baseurl: ""
 
-lang: en
-timezone: Europe/Oslo
-
-github:
-  username: toreaurstadboss
-
-social:
-  name: Tore Aurstad
-  links:
-    - https://github.com/toreaurstadboss
-
-theme_mode: # leave empty to follow system default (light/dark)
-
-avatar: /assets/images/avatar.jpg   # replace with your own image path
-
-toc: true         # table of contents on posts
-
-paginate: 10
-
 markdown: kramdown
 highlighter: rouge
-
-kramdown:
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: highlight
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-
-mermaid:
-  # Mermaid.js CDN — loaded only on pages with `mermaid: true` in front matter
-  src: https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-include-cache
