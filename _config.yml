@@ -1,4 +1,4 @@
-remote_theme: cotes2020/jekyll-theme-chirpy
+theme: jekyll-theme-chirpy
 
 title: Tore Aurstad
 tagline: Developer notes, lectures & demos
@@ -43,8 +43,6 @@ mermaid:
   src: https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
 
 plugins:
-  - jekyll-remote-theme
-  - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed

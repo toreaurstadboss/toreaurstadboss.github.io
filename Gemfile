@@ -1,12 +1,11 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.3"
+gem "jekyll-theme-chirpy", "~> 7.2"
 
 group :jekyll_plugins do
-  gem "jekyll-remote-theme"
-  gem "jekyll-paginate"
-  gem "jekyll-seo-tag"
+  gem "jekyll-feed", "~> 0.17"
   gem "jekyll-sitemap"
-  gem "jekyll-feed"
+  gem "jekyll-seo-tag", "~> 2.8"
   gem "jekyll-include-cache"
 end
