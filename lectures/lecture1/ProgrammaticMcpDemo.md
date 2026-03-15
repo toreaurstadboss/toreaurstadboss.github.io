@@ -11,8 +11,9 @@ This lecture is split into multiple pages.
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-OverviewOfMcp.html">1. Overview of MCP</a>
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-IntroToMcpDemo.html">2. Intro to MCP Demo</a>
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">3. Serverside of MCP Demo</a>
-  <a href="/lectures/lecture1//ProgrammaticMcpDemo-NominatimTool.html">4. Nominatim Tool</a>
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-NominatimTool.html">4. Nominatim Tool</a>
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-YrWeatherTool.html">5. Yr weather Tool</a>
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-MetadataJsonRpc.html">6. MCP Metadata (JSON-RPC)</a>
 </div>
 
 ## Quick navigation
@@ -22,6 +23,7 @@ This lecture is split into multiple pages.
 - [Serverside of MCP Demo](ProgrammaticMcpDemo-ServerSideOfMcpDemo.html)
 - [Nominatim Tool](ProgrammaticMcpDemo-NominatimTool.html)
 - [Yr weather Tool](ProgrammaticMcpDemo-YrWeatherTool.html)
+- [MCP Metadata (JSON-RPC)](ProgrammaticMcpDemo-MetadataJsonRpc.html)
 
 <div class="lecture-pager">
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-OverviewOfMcp.html">Start lecture →</a>

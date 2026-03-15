@@ -9,6 +9,7 @@ title: Programmatic MCP Demo - Intro to MCP Demo
   <a href="ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Serverside of MCP Demo</a>
   <a href="ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
   <a href="ProgrammaticMcpDemo-YrWeatherTool.html">Yr weather Tool</a>
+  <a href="ProgrammaticMcpDemo-MetadataJsonRpc.html">MCP Metadata (JSON-RPC)</a>
 </div>
 
 # Intro to MCP Demo
@@ -55,15 +56,15 @@ We can with for example Swagger present metadata information about the tools tha
 
 The Github repo is publicly available here for those who want to explore the code and try it out themselves:
 
-https://github.com/toreaurstadboss/WeatherMCPDemo
+[https://github.com/toreaurstadboss/WeatherMCPDemo](https://github.com/toreaurstadboss/WeatherMCPDemo)
 
 Note that to run the demo, you must have an account at Anthropic web site and set up an API key here:
 
-https://console.anthropic.com/dashboard
+[https://console.anthropic.com/dashboard](https://console.anthropic.com/dashboard)
 
-To just test out Anthropic, it is not expensive. I paid them 20 dollars a year ago and still have about 5 dollars left on the account of mine. And this includes a lot of testing and playing around using the Anthropic Claude service.
+It is possible to pay as you use to test out Anthropic LLMs. I paid 20 dollars a year ago and still have not spent all of it. And this includes a lot of testing and playing around using the Anthropic Claude service in the demos I have written.
 
-The model I have been using while testing is _claude-3-haiku-20240307_, it is some months since I worked with the demo and therefore **newer Claude** models should be possible to test out here.
+The model I have been using while testing is _claude-3-haiku-20240307_. It is some months since I worked most with the demo and I expect **newer Claude** models should be possible to test of course.
 
 <div class="lecture-pager">
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-OverviewOfMcp.html">← Previous: Overview of MCP</a>

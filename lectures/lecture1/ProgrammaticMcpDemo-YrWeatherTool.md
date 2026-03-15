@@ -9,6 +9,7 @@ title: Programmatic MCP Demo - Yr weather Tool
     <a href="ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Serverside of MCP Demo</a>
     <a href="ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
     <a href="ProgrammaticMcpDemo-YrWeatherTool.html" aria-current="page">Yr weather Tool</a>
+    <a href="ProgrammaticMcpDemo-MetadataJsonRpc.html">MCP Metadata (JSON-RPC)</a>
 </div>
 
 # Yr weather Tool
@@ -18,6 +19,33 @@ The Yr tool is defined in the same way as the Nominatim tool, it is a sealed cla
 The tool has got instructions in the Description that tell the tool to use the Nominatim tool to look up coordinates for the place that is to be checked for weather prediction.
 
 We also use async here since we communicate with the remote service.
+
+It is an enlightening experience to debug the serverside to watch how the LLM uses the tools given.
+
+When debugging, you will find that if a relevant question that fullfils the conditions for the tool to be used and contacted by MCP from the client using an LLM and the given context will provide the information given to the parameters of the method for the tool.
+
+- When I ask about the weather for a given place, the description of the Yr weather tools shown below, provides the location given in the context. 
+
+- If the location is in United States, another third tool is used by the way
+
+- The _Yr weather tool_ has multiple parameters. I have only given a description for the **place** parameter, but it is specific enough to give enough context to make it work for the other parameters that will get parameters from MCP / LLM in tandem. 
+- The _Nominatim_ tool receives the place from the context given (via he question the client asked for weather for a given _place_). The tool returns the latitude and longitude via the OpenStreetMap Nominatim API service
+- When we have the place, the latitude and longitude and hopefully a good enough question from the client to establish which time window we want to know the weather, we can find the weather. 
+- There are some additional parameters here such as IHttpClientFactory and ILogger and those are injected via ASP.NET dependency injection as usual
+
+- We might say that the place, latitude and longitude also are "injected" by MCP , but that would be a bit misleading. What matters, is that the parameters are **populated** via MCP. 
+
+## Key takeaway : MCP can populate parameters in tool methods and this is done via good description. But it is the LLM that decides (orchestrator)
+
+MCP populates tool parameters by combining:
+- Your tool’s parameter schema (from attributes + .NET type metadata)
+- The natural‑language description you provide
+- The LLM’s reasoning over the user’s request + context
+The LLM chooses which tool to call and fills in the parameters by matching the user’s intent to the tool’s schema.
+The MCP runtime does not decide values — it only exposes the schema. The LLM decides.
+
+
+
 
 ```csharp
 namespace WeatherServer.Tools;
@@ -132,5 +160,5 @@ public sealed class YrTools
 
 <div class="lecture-pager">
     <a href="/lectures/lecture1/ProgrammaticMcpDemo-NominatimTool.html">← Previous: Nominatim Tool</a>
-    <a href="/lectures/lecture1/ProgrammaticMcpDemo.html">Back to TOC →</a>
+    <a href="/lectures/lecture1/ProgrammaticMcpDemo-MetadataJsonRpc.html">Next: MCP Metadata (JSON-RPC) →</a>
 </div>
