@@ -35,7 +35,7 @@ We could have combined this for example with Synthesized Text to Speech voice as
 
 ### Screenshot of the demo
 
-![claude](../assets/images/lecture1/claudechatdemo2.png)
+![claude](/assets/images/lecture1/claudechatdemo2.png)
 
 The demo here focuses on *Tools*.
 
@@ -45,7 +45,7 @@ In the same demo repo, you find code how you can expose metadata about the tools
 
 We can with for example Swagger present metadata information about the tools that are offered in the MCP protocol. This is a good way to present the contract of the MCP protocol and what capabilities it offers.
 
-![Swagger tools Json RPC](../assets/images/lecture1/toolsmetadatajsonrpcmcpdemo1.png)
+![Swagger tools Json RPC](/assets/images/lecture1/toolsmetadatajsonrpcmcpdemo1.png)
 
 ### Github repo for the MCP Weather Demo
 

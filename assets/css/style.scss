@@ -3,6 +3,23 @@
 
 @import "minima";
 
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/roboto/roboto-latin-400-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 16pt;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .wrapper,
 .page-content .wrapper {
   max-width: 1400px;
