@@ -90,6 +90,6 @@ Observe the use of Name and Description here. Here we provide both the metadata 
 The tool is inside an asynchronous method and returns a string with the latitude and longitude of the place looked up, if found.
 
 <div class="lecture-pager">
-    <a href="ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">← Previous: Serverside of MCP Demo</a>
-    <a href="ProgrammaticMcpDemo-YrWeatherTool.html">Next: Yr weather Tool →</a>
+    <a href="/lectures/lecture1/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">← Previous: Serverside of MCP Demo</a>
+    <a href="/lectures/lecture1/ProgrammaticMcpDemo-YrWeatherTool.html">Next: Yr weather Tool →</a>
 </div>

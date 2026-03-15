@@ -131,6 +131,6 @@ public sealed class YrTools
 ```
 
 <div class="lecture-pager">
-    <a href="ProgrammaticMcpDemo-NominatimTool.html">← Previous: Nominatim Tool</a>
-    <a href="ProgrammaticMcpDemo.html">Back to TOC →</a>
+    <a href="/lectures/lecture1/ProgrammaticMcpDemo-NominatimTool.html">← Previous: Nominatim Tool</a>
+    <a href="/lectures/lecture1/ProgrammaticMcpDemo.html">Back to TOC →</a>
 </div>

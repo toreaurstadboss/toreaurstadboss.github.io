@@ -62,6 +62,6 @@ To just test out Anthropic, it is not expensive. I paid them 20 dollars a year a
 The model I have been using while testing is _claude-3-haiku-20240307_, it is some months since I worked with the demo and therefore **newer Claude** models should be possible to test out here.
 
 <div class="lecture-pager">
-  <a href="ProgrammaticMcpDemo-OverviewOfMcp.html">← Previous: Overview of MCP</a>
-  <a href="ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Next: Serverside of MCP Demo →</a>
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-OverviewOfMcp.html">← Previous: Overview of MCP</a>
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Next: Serverside of MCP Demo →</a>
 </div>

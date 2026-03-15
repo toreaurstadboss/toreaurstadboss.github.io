@@ -138,6 +138,6 @@ app.MapMcp("/sse"); // SSE endpoint at /sse
 ```
 
 <div class="lecture-pager">
-    <a href="ProgrammaticMcpDemo-IntroToMcpDemo.html">← Previous: Intro to MCP Demo</a>
-    <a href="ProgrammaticMcpDemo-NominatimTool.html">Next: Nominatim Tool →</a>
+    <a href="/lectures/lecture1/ProgrammaticMcpDemo-IntroToMcpDemo.html">← Previous: Intro to MCP Demo</a>
+    <a href="/lectures/lecture1/ProgrammaticMcpDemo-NominatimTool.html">Next: Nominatim Tool →</a>
 </div>
