@@ -15,29 +15,33 @@ title: Programmatic MCP Demo - Intro to MCP Demo
 
 ## The MCP Demo : Yr weather service using Model Context Protcol
 
-The demo is a simple weather service that uses Yr web services to provide weather information.
+>The demo is a simple weather service that uses Yr web >services to provide weather information.
 
 **What we will build**
 
-The demo is a web application where you can ask about the weather at a given place and get the response which will use a tool that uses Yr web services to get weather information. The demo demonstrates using MCP tools. **Tools** is a category of capabilities that are offered in the MCP protocol.
+The demo is a web application where you can ask about the weather at a given place and get the response which will use a tool that uses Yr web services to get weather information. The demo demonstrates using MCP tools. 
 
-Server features that are offered with MCP are:
+**Tools** is a category of capabilities that are offered in the MCP protocol.
+
+#### Server features that are offered with MCP are:
 - Tools: Executable functions that allow models to perform actions or retrieve information
 - Resources: Structured data or content that provides additional context to the model
 - Prompts: Predefined templates or instructions that guide language model interactions
 
 The screenshot below shows the Demo in action, where I ask about the weather in Trondheim tonight. I specify it to include details also.
 
-As we see, we can ask free-form about the weather the AI LLM model which makes it possible to have a more natural conversation about the weather than just using a website to look up the weather.
-
-Example of a more advanced demo would be:
-We could have combined this for example with Synthesized Text to Speech voice assistant and Speech to Text to have a natural conversation with the AI model.
-
 ### Screenshot of the demo
 
 ![claude](/assets/images/lecture1/claudechatdemo2.png)
 
-The demo here focuses on *Tools*.
+
+As the screenshot shows, we can ask free-form about the weather the AI LLM model which makes it possible to have a more natural conversation about the weather than just using a website to look up the weather.
+
+_Example of a more advanced demo would be:
+We could have combined this for example with Synthesized Text to Speech voice assistant and Speech to Text to have a natural conversation with the AI model._
+
+
+The demo here focuses on the following _Server Feature_ of MCP :  **Tools**.
 
 Yr is a popular weather service in Norway delivered by Norwegian Meteorological Institute (met.no) in Oslo, Norway.
 
