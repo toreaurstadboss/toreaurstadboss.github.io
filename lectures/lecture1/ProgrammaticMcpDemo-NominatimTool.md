@@ -4,11 +4,11 @@ title: Programmatic MCP Demo - Nominatim Tool
 ---
 
 <div class="lecture-menu">
-  <a href="/lectures/ProgrammaticMcpDemo-OverviewOfMcp.html">Overview of MCP</a>
-  <a href="/lectures/ProgrammaticMcpDemo-IntroToMcpDemo.html">Intro to MCP Demo</a>
-  <a href="/lectures/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Serverside of MCP Demo</a>
-  <a href="/lectures/ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
-  <a href="/lectures/ProgrammaticMcpDemo-YrWeatherTool.html">Yr weather Tool</a>
+    <a href="ProgrammaticMcpDemo-OverviewOfMcp.html">Overview of MCP</a>
+    <a href="ProgrammaticMcpDemo-IntroToMcpDemo.html">Intro to MCP Demo</a>
+    <a href="ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Serverside of MCP Demo</a>
+    <a href="ProgrammaticMcpDemo-NominatimTool.html" aria-current="page">Nominatim Tool</a>
+    <a href="ProgrammaticMcpDemo-YrWeatherTool.html">Yr weather Tool</a>
 </div>
 
 # Nominatim Tool
@@ -90,6 +90,6 @@ Observe the use of Name and Description here. Here we provide both the metadata 
 The tool is inside an asynchronous method and returns a string with the latitude and longitude of the place looked up, if found.
 
 <div class="lecture-pager">
-  <a href="/lectures/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">← Previous: Serverside of MCP Demo</a>
-  <a href="/lectures/ProgrammaticMcpDemo-YrWeatherTool.html">Next: Yr weather Tool →</a>
+    <a href="ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">← Previous: Serverside of MCP Demo</a>
+    <a href="ProgrammaticMcpDemo-YrWeatherTool.html">Next: Yr weather Tool →</a>
 </div>

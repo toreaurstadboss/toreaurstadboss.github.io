@@ -11,25 +11,42 @@
 }
 
 .lecture-menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
   margin: 16px 0 24px;
 }
 
 .lecture-menu a {
-  display: inline-block;
-  font-size: 1.1rem;
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  min-height: 58px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
   text-decoration: none;
-  border: 1px solid currentColor;
-  border-radius: 6px;
-  padding: 10px 14px;
+  border: 2px solid currentColor;
+  border-radius: 10px;
+  padding: 12px 14px;
+  box-sizing: border-box;
 }
 
 .lecture-menu-toc a {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  min-height: 64px;
   padding: 12px 16px;
+}
+
+.lecture-menu a:hover,
+.lecture-menu a:focus-visible,
+.lecture-pager a:hover,
+.lecture-pager a:focus-visible {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.lecture-menu a[aria-current="page"] {
+  border-width: 3px;
 }
 
 .lecture-pager {
@@ -43,9 +60,24 @@
 .lecture-pager a {
   display: inline-block;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
-  border: 1px solid currentColor;
-  border-radius: 6px;
+  border: 2px solid currentColor;
+  border-radius: 10px;
   padding: 10px 14px;
+}
+
+@media (max-width: 720px) {
+  .lecture-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .lecture-pager {
+    flex-direction: column;
+  }
+
+  .lecture-pager a {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }

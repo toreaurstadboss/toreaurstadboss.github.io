@@ -4,11 +4,11 @@ title: Programmatic MCP Demo - Overview of MCP
 ---
 
 <div class="lecture-menu">
-  <a href="/lectures/ProgrammaticMcpDemo-OverviewOfMcp.html">Overview of MCP</a>
-  <a href="/lectures/ProgrammaticMcpDemo-IntroToMcpDemo.html">Intro to MCP Demo</a>
-  <a href="/lectures/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Serverside of MCP Demo</a>
-  <a href="/lectures/ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
-  <a href="/lectures/ProgrammaticMcpDemo-YrWeatherTool.html">Yr weather Tool</a>
+  <a href="ProgrammaticMcpDemo-OverviewOfMcp.html" aria-current="page">Overview of MCP</a>
+  <a href="ProgrammaticMcpDemo-IntroToMcpDemo.html">Intro to MCP Demo</a>
+  <a href="ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Serverside of MCP Demo</a>
+  <a href="ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
+  <a href="ProgrammaticMcpDemo-YrWeatherTool.html">Yr weather Tool</a>
 </div>
 
 # Overview of MCP
@@ -69,6 +69,6 @@ It is important to limit of what a LLM can reach and define a contract that defi
 MCP is both a protocol and contract that defines how AI applications can request and receive data from various sources. It abstracts away the complexities of different APIs and data formats, allowing developers to focus on building AI applications without worrying about the underlying data access.
 
 <div class="lecture-pager">
-  <a href="/lectures/ProgrammaticMcpDemo.html">← TOC</a>
-  <a href="/lectures/ProgrammaticMcpDemo-IntroToMcpDemo.html">Next: Intro to MCP Demo →</a>
+  <a href="ProgrammaticMcpDemo.html">← TOC</a>
+  <a href="ProgrammaticMcpDemo-IntroToMcpDemo.html">Next: Intro to MCP Demo →</a>
 </div>

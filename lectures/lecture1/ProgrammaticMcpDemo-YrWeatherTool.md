@@ -4,11 +4,11 @@ title: Programmatic MCP Demo - Yr weather Tool
 ---
 
 <div class="lecture-menu">
-  <a href="/lectures/ProgrammaticMcpDemo-OverviewOfMcp.html">Overview of MCP</a>
-  <a href="/lectures/ProgrammaticMcpDemo-IntroToMcpDemo.html">Intro to MCP Demo</a>
-  <a href="/lectures/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Serverside of MCP Demo</a>
-  <a href="/lectures/ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
-  <a href="/lectures/ProgrammaticMcpDemo-YrWeatherTool.html">Yr weather Tool</a>
+    <a href="ProgrammaticMcpDemo-OverviewOfMcp.html">Overview of MCP</a>
+    <a href="ProgrammaticMcpDemo-IntroToMcpDemo.html">Intro to MCP Demo</a>
+    <a href="ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Serverside of MCP Demo</a>
+    <a href="ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
+    <a href="ProgrammaticMcpDemo-YrWeatherTool.html" aria-current="page">Yr weather Tool</a>
 </div>
 
 # Yr weather Tool
@@ -131,6 +131,6 @@ public sealed class YrTools
 ```
 
 <div class="lecture-pager">
-  <a href="/lectures/ProgrammaticMcpDemo-NominatimTool.html">← Previous: Nominatim Tool</a>
-  <a href="/lectures/ProgrammaticMcpDemo.html">Back to TOC →</a>
+    <a href="ProgrammaticMcpDemo-NominatimTool.html">← Previous: Nominatim Tool</a>
+    <a href="ProgrammaticMcpDemo.html">Back to TOC →</a>
 </div>

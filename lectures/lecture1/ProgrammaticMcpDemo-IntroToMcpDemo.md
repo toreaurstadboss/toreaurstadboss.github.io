@@ -4,11 +4,11 @@ title: Programmatic MCP Demo - Intro to MCP Demo
 ---
 
 <div class="lecture-menu">
-  <a href="/lectures/ProgrammaticMcpDemo-OverviewOfMcp.html">Overview of MCP</a>
-  <a href="/lectures/ProgrammaticMcpDemo-IntroToMcpDemo.html">Intro to MCP Demo</a>
-  <a href="/lectures/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Serverside of MCP Demo</a>
-  <a href="/lectures/ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
-  <a href="/lectures/ProgrammaticMcpDemo-YrWeatherTool.html">Yr weather Tool</a>
+  <a href="ProgrammaticMcpDemo-OverviewOfMcp.html">Overview of MCP</a>
+  <a href="ProgrammaticMcpDemo-IntroToMcpDemo.html" aria-current="page">Intro to MCP Demo</a>
+  <a href="ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Serverside of MCP Demo</a>
+  <a href="ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
+  <a href="ProgrammaticMcpDemo-YrWeatherTool.html">Yr weather Tool</a>
 </div>
 
 # Intro to MCP Demo
@@ -62,6 +62,6 @@ To just test out Anthropic, it is not expensive. I paid them 20 dollars a year a
 The model I have been using while testing is _claude-3-haiku-20240307_, it is some months since I worked with the demo and therefore **newer Claude** models should be possible to test out here.
 
 <div class="lecture-pager">
-  <a href="/lectures/ProgrammaticMcpDemo-OverviewOfMcp.html">← Previous: Overview of MCP</a>
-  <a href="/lectures/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Next: Serverside of MCP Demo →</a>
+  <a href="ProgrammaticMcpDemo-OverviewOfMcp.html">← Previous: Overview of MCP</a>
+  <a href="ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Next: Serverside of MCP Demo →</a>
 </div>
