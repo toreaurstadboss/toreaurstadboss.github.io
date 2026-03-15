@@ -8,11 +8,11 @@ title: Programmatic MCP Demo
 This lecture is split into multiple pages.
 
 <div class="lecture-menu lecture-menu-toc">
-  <a href="ProgrammaticMcpDemo-OverviewOfMcp.html">1. Overview of MCP</a>
-  <a href="ProgrammaticMcpDemo-IntroToMcpDemo.html">2. Intro to MCP Demo</a>
-  <a href="ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">3. Serverside of MCP Demo</a>
-  <a href="ProgrammaticMcpDemo-NominatimTool.html">4. Nominatim Tool</a>
-  <a href="ProgrammaticMcpDemo-YrWeatherTool.html">5. Yr weather Tool</a>
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-OverviewOfMcp.html">1. Overview of MCP</a>
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-IntroToMcpDemo.html">2. Intro to MCP Demo</a>
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">3. Serverside of MCP Demo</a>
+  <a href="/lectures/lecture1//ProgrammaticMcpDemo-NominatimTool.html">4. Nominatim Tool</a>
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-YrWeatherTool.html">5. Yr weather Tool</a>
 </div>
 
 ## Quick navigation
@@ -24,5 +24,5 @@ This lecture is split into multiple pages.
 - [Yr weather Tool](ProgrammaticMcpDemo-YrWeatherTool.html)
 
 <div class="lecture-pager">
-  <a href="ProgrammaticMcpDemo-OverviewOfMcp.html">Start lecture →</a>
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-OverviewOfMcp.html">Start lecture →</a>
 </div>
