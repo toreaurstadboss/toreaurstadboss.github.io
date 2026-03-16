@@ -34,7 +34,6 @@ body {
   margin: 16px 0 24px;
 }
 
-a.page-link,
 .lecture-menu a,
 .lecture-pager a {
   font-family: "Roboto", "Segoe UI", Tahoma, Arial, sans-serif;
@@ -48,8 +47,6 @@ a.page-link,
   transition: transform 0.14s ease, box-shadow 0.14s ease, filter 0.14s ease;
 }
 
-a.page-link:hover,
-a.page-link:focus-visible,
 .lecture-menu a:hover,
 .lecture-menu a:focus-visible,
 .lecture-pager a:hover,
@@ -60,11 +57,32 @@ a.page-link:focus-visible,
   transform: translateY(-1px);
 }
 
-a.page-link:active,
 .lecture-menu a:active,
 .lecture-pager a:active {
   transform: translateY(0);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.site-nav .page-link {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 2px 6px;
+  margin-left: 6px;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  transition: color 0.12s ease, background-color 0.12s ease;
+}
+
+.site-nav .page-link:hover,
+.site-nav .page-link:focus-visible {
+  background-color: rgba(0, 0, 0, 0.06);
+  color: inherit;
+  text-decoration: none;
 }
 
 .lecture-menu a {

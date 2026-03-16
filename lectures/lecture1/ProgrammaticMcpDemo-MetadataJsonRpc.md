@@ -10,13 +10,14 @@ title: Programmatic MCP Demo - MCP Metadata with Swagger
   <a href="ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
   <a href="ProgrammaticMcpDemo-YrWeatherTool.html">Yr weather Tool</a>
   <a href="ProgrammaticMcpDemo-MetadataJsonRpc.html" aria-current="page">MCP Metadata (JSON-RPC)</a>
+    <a href="ProgrammaticMcpDemo-ModelInspector.html">Model Context Inspector</a>
 </div>
 
 # MCP Metadata in Swagger (JSON-RPC)
 
 This part shows how to expose MCP metadata in Swagger and retrieve metadata in JSON-RPC style.
 
-Source post:
+Source post (from my Blogger website Coding Grounds):
 - [Metadata retrieval and debugging MCP servers](https://toreaurstad.blogspot.com/2025/11/metadata-retrieval-and-debugging-mcp.html)
 
 ## 1) Enable Swagger in Program.cs
@@ -46,6 +47,8 @@ public static void Main(string[] args)
 ```
 
 ## 2) Expose tools metadata via controller
+
+We use `IMcpClient` here from `ModelContextProtocol.Client` namespace to get the metadata of our MCP tools. The data is in Json-RPC format.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
@@ -112,6 +115,8 @@ Swagger JSON-RPC metadata output:
 
 JSON browser view of metadata document:
 
+Here I used JsonCrack to watch Json online to watch the different metadata about the MCP tools.
+
 ![MCP JSON browser metadata view](/assets/images/lecture1/McpJsonBrowser1.png)
 
 ## Key takeaways
@@ -123,5 +128,5 @@ JSON browser view of metadata document:
 
 <div class="lecture-pager">
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-YrWeatherTool.html">← Previous: Yr weather Tool</a>
-  <a href="/lectures/lecture1/ProgrammaticMcpDemo.html">Back to TOC →</a>
+    <a href="/lectures/lecture1/ProgrammaticMcpDemo-ModelInspector.html">Next: Model Context Inspector →</a>
 </div>

@@ -10,6 +10,7 @@ title: Programmatic MCP Demo - Yr weather Tool
     <a href="ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
     <a href="ProgrammaticMcpDemo-YrWeatherTool.html" aria-current="page">Yr weather Tool</a>
     <a href="ProgrammaticMcpDemo-MetadataJsonRpc.html">MCP Metadata (JSON-RPC)</a>
+    <a href="ProgrammaticMcpDemo-ModelInspector.html">Model Context Inspector</a>
 </div>
 
 # Yr weather Tool

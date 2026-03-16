@@ -10,6 +10,7 @@ title: Programmatic MCP Demo - Overview of MCP
   <a href="ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
   <a href="ProgrammaticMcpDemo-YrWeatherTool.html">Yr weather Tool</a>
   <a href="ProgrammaticMcpDemo-MetadataJsonRpc.html">MCP Metadata (JSON-RPC)</a>
+  <a href="ProgrammaticMcpDemo-ModelInspector.html">Model Context Inspector</a>
 </div>
 
 # Overview of MCP
