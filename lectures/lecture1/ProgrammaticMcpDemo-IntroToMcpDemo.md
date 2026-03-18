@@ -71,3 +71,11 @@ The model I have been using while testing is _claude-3-haiku-20240307_. It is so
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-OverviewOfMcp.html">← Previous: Overview of MCP</a>
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Next: Serverside of MCP Demo →</a>
 </div>
+
+### Video of the demos in use
+
+<video controls width="100%" style="max-width: 900px; display: block; margin: 1rem 0;">
+  <source src="/assets/videos/WeatherDemoMarch2026.mp4" type="video/mp4">
+  Your browser does not support the HTML5 video element.
+</video> 
+
