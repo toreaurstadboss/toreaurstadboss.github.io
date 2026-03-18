@@ -72,7 +72,12 @@ The model I have been using while testing is _claude-3-haiku-20240307_. It is so
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Next: Serverside of MCP Demo →</a>
 </div>
 
-### Video of the demos in use
+### Video of the demo in use
+
+The following video shows the demo in use, where I ask about the weather in Trondheim tonight and get a response that includes 
+details about the weather. 
+
+The video demonstrates how the demo works and how it uses the MCP protocol to provide weather information.
 
 <video controls width="100%" style="max-width: 900px; display: block; margin: 1rem 0;">
   <source src="/assets/videos/WeatherDemoMarch2026.mp4" type="video/mp4">
