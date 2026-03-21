@@ -51,36 +51,14 @@ The protocol can be read about in more detail at the web site :
 
 [https://modelcontextprotocol.io](https://modelcontextprotocol.io)
 
-<div class="mermaid" markdown="0">
-%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '22px'}}}%%
-graph TD
-    subgraph AI_Applications ["AI Applications & Interfaces"]
-        direction TB
-        A1["<b>Chat Interfaces</b><br/>(Windows Copilot, ChatGPT, Claude)"]
-        A2["<b>IDEs & Code Editors</b><br/>(VS Code, Visual Studio, Cursor)"]
-        A3["<b>Custom .NET AI Apps</b><br/>(Semantic Kernel, .NET SDKs)"]
-    end
+A system diagram of the architecture of MCP is shown below, where MCP is the connector between the LLM and the data sources and tools. The LLM is the orchestrator and takes the decisions about which tool to call and what parameters to fill in.
 
-    subgraph Protocol_Layer ["Model Context Protocol — Middle Layer"]
-        MCP["<b>● Model Context Protocol ●</b><br/>(Standardized Interface)"]
-    end
+![MCP - Surroundings](/assets/images/lecture1/systemsviewmcpsurroundings.png)
 
-    subgraph Data_Tools ["Data Sources & Tools"]
-        direction TB
-        D1["<b>File System</b><br/>(Windows File I/O, UNC Shares, OneDrive)"]
-        D2["<b>Databases</b><br/>(SQL Server, Azure SQL, SQLite)"]
-        D3["<b>Microsoft Cloud APIs</b><br/>(MS Graph, SharePoint, Azure Blob Storage)"]
-        D4["<b>REST & Web APIs</b><br/>(GitHub, OpenWeather, Custom HTTP Services)"]
-        D5["<b>Windows System APIs</b><br/>(WMI, Registry, Event Log, PowerShell)"]
-    end
+The _Basic MCP Client/Server Architecture_ is shown in the diagram below, showing how a user can via an agent of an AI application contact a MCP server via an MCP client. 
 
-    AI_Applications <==> MCP
-    MCP <==> Data_Tools
+![MCP - Surroundings](/assets/images/lecture1/mcpserversmulitiplev2.png)
 
-    style MCP fill:#00FF00,stroke:#333,stroke-width:4px
-    style AI_Applications fill:#e1f5fe,stroke:#01579b
-    style Data_Tools fill:#fff3e0,stroke:#e65100
-</div>
 
 ---
 
