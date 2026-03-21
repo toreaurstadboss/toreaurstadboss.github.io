@@ -76,7 +76,8 @@ The following sequence diagram shows how the responsobility are divided between 
 
 The following UML sequence diagram (PlantUML 2.0 Dialect used here) shows the interactions between the components when using for example a tool in MCP Server. As we see, there are multiple layers, but an orderly interaction flow decided by given input and context. At the same time, there are some diffusion and spontaneous behavior of such a setup, given that the final strategy and choice of for example tools to use can vary but is always decided by the LLM ultimately. 
 
-### Sequence diagram of the interactions between the different main components in MCP and LLM architecture (PlantUML 2.0 diagram)
+### Sequence diagram of the interactions between the different main components in MCP and LLM architecture
+(PlantUML 2.0 diagram used here)
 
 ![MCP - Surroundings](/assets/images/lecture1/mcp_sequence.png)
 
