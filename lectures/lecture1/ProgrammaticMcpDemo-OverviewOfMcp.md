@@ -78,7 +78,7 @@ The following UML sequence diagram (PlantUML 2.0 Dialect used here) shows the in
 
 ### Sequence diagram of the interactions between the different main components in MCP and LLM architecture (PlantUML 2.0 diagram)
 
-![MCP - Surroundings](/assets/images/lecture1/sequencediagram_mcp_flow_llm_mcp_client_mcp_service.png
+![MCP - Surroundings](/assets/images/lecture1/mcp_sequence.png)
 
 ---
 
