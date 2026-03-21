@@ -31,6 +31,12 @@ title: Programmatic MCP Demo - Overview of MCP
 
 MCP is a standardized interface that enables AI applications to interact with a wide variety of data sources and tools in a consistent way. 
 
+Communication can be done in two main means of communication:
+
+- 🔷 **Streamable HTTP**: A transport protocol that allows for real-time, bidirectional communication between the client and server. It is designed to handle large volumes of data and can be used for applications that require low latency and high throughput
+- 🔷 **STDIO**: Standard I/O communication via a keyboard outputted to the console.
+- 🔷 **SSE - Server side events**: Not so much in use any longer. The demo I will show makes use of SSE by the way. Streamable HTTP has taken over for SSE as it is more reliable. There are some challenges with SSE such as with load balancers, proxy performance, CORS, authentication. The demo will show SSE, but streamable HTTP is what is actually being used most now, besides STDIO. 
+
 MCP is a protocol and a contract that allows language models to connect to tools and data sources. 
 
 The following systems view diagram puts MCP in the middle as a connector between the LLMs in an AI system and possibly multiple data sources. 
@@ -40,12 +46,15 @@ The following systems view diagram puts MCP in the middle as a connector between
 🔷 **LLM and MCP. Orchestrator vs Connector.**
  MCP is the connector between LLM and data sources and tools (plus more) and LLM is the orchestrator and takes the decisions.
 
-MCP is a way to provide data for the LLM defined via these three core concepts. 
 
+Let's also consider how the LLM will provide information (parameters) to a tool or resources using MCP. 
+
+🔷 **LLM parameter handling to MCP server features (tools / resources)**
 MCP populates tool parameters by combining:
-- Your tool’s parameter schema (from attributes + .NET type metadata)
-- The natural‑language description you provide
-- The LLM’s reasoning over the user’s request + context
+- 🔷Your tool’s parameter schema (from attributes + .NET type metadata)
+- 🔷The natural‑language description you provide
+- 🔷The LLM’s reasoning over the user’s request + context
+- 
 The LLM chooses which tool to call and fills in the parameters by matching the user’s intent to the tool’s schema.
 The MCP runtime does not decide values — it only exposes the schema. The LLM decides.
 
