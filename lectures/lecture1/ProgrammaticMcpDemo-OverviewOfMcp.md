@@ -73,9 +73,21 @@ The following UML sequence diagram (PlantUML 2.0 Dialect used here) shows the in
 
 ---
 
-## Key-takeaway : MCP is also both a contract and a protocol
+## Key-takeaway 
 
+🔷 **MCP is both a contract and a protocol**
+ MCP is also both a contract and a protocol. It is an Open Source standard that allows multiple vendors to implement the protocol and contract in their own way, but still be able to interoperate with each other.
 
+🔷 **User**
+- Initiates interaction
+
+🔷 **Application**
+- Hosts the agent loop
+- Coordinates LLM and MCP client
+
+🔷 **MCP Server**
+- Executes tools
+- Accesses external resources
 
 It is important to define and limit of what a LLM can reach and define a contract that defines which tools, (data) resources and other capabilities that a LLM can access.
 
