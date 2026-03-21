@@ -76,7 +76,7 @@ The following UML sequence diagram (PlantUML 2.0 Dialect used here) shows the in
 
 ---
 
-## Key-takeaway 
+## Key-points about the different the central participants in the architecture of MCP and LLMs 
 
 🔷 **MCP is both a contract and a protocol**
  MCP is also both a contract and a protocol. It is an Open Source standard that allows multiple vendors to implement the protocol and contract in their own way, but still be able to interoperate with each other.
@@ -84,13 +84,20 @@ The following UML sequence diagram (PlantUML 2.0 Dialect used here) shows the in
 🔷 **User**
 - Initiates interaction
 
-🔷 **Application**
+🔷 **Application using AI with LLM / MCP functionality**
 - Hosts the agent loop
 - Coordinates LLM and MCP client
 
+🔷 **LLM**
+- Iniated by the application on behalf of user
+- Handles the overall natural language understanding and decision making
+- Processing user input and given context
+
 🔷 **MCP Server**
-- Executes tools
+- Contacted by LLM via a MCP client when required to do so to get necessary data or access remote tools
+- Executes the tools 
 - Accesses external resources
+- Provides additional data and metadata such as tool descriptions and parameters to the LLM to use when using the MCP client
 
 It is important to define and limit of what a LLM can reach and define a contract that defines which tools, (data) resources and other capabilities that a LLM can access.
 
