@@ -35,7 +35,10 @@ MCP is a protocol and a contract that allows language models to connect to tools
 
 The following systems view diagram puts MCP in the middle as a connector between the LLMs in a AIs system and possible multiple data source. 
 
-## Key takeaway : MCP is the connector between LLM and data sources and tools (plus more) and LLM is the orchestrator and takes the decisions.
+## Key points about the MCP and LLM relationship and role division
+
+🔷 **LLM and MCP. Orchestrator vs Connector.**
+ MCP is the connector between LLM and data sources and tools (plus more) and LLM is the orchestrator and takes the decisions.
 
 MCP is a way to provide data for the LLM defined via these three core concepts. 
 
