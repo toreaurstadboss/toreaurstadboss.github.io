@@ -84,6 +84,14 @@ MCP is a protocol and a contract that allows language models to connect to tools
 }
 ```
 
+**MCP uses Json-RCP 2.0 standard and extends this**
+
+The extensions that MCP adds to the Json-RPC 2.0 standard are related to the specific needs of AI applications and the interaction between LLMs and tools/data sources. These extensions include additional fields and conventions for handling tool calls, resource access, and other interactions that are common in AI applications.
+
+<a href="https://www.jsonrpc.org/specification" target="_blank">
+SON-RPC 2.0 Specification - https://www.jsonrpc.org/specification
+</a>
+
 ---
 
 Let's also consider how the LLM will provide information (parameters) to a tool or resources using MCP. 
