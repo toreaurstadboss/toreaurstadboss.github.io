@@ -57,12 +57,25 @@ A system diagram of the architecture of MCP is shown below, where MCP is the con
 
 The _Basic MCP Client/Server Architecture_ is shown in the diagram below, showing how a user can via an agent of an AI application contact a MCP server via an MCP client. 
 
+Important - The LLM will actively decide via input from the User and given context which tools to call from which MCP servers using MCP client, which will contact a MCP server. There can be multiple MCP servers that offers differents tools, resources and prompts. 
+
 ![MCP - Surroundings](/assets/images/lecture1/mcpserversmulitiplev2.png)
 
+It is easy to mix up the different layers and components in the architecture. It is multiple tiers and layers in the architecture, but the key takeaway is that MCP is the connector between LLM and data sources and tools (plus more) and LLM is the orchestrator and takes the decisions.
+
+The following sequence diagram shows how the responsobility are divided between the different components in the architecture. The LLM is the orchestrator and takes the decisions about which tool to call and what parameters to fill in, while MCP is the connector that allows the LLM to access the tools and data sources.
+
+### MCP - Sequence diagram of the interactions between the different main components
+
+The following UML sequence diagram (PlantUML 2.0 Dialect used here) shows the interactions between the components when using for example a tool in MCP Server. As we see, there are multiple layers, but an orderly interaction flow decided by given input and context. At the same time, there are some diffusion and spontaneous behavior of such a setup, given that the final strategy and choice of for example tools to use can vary but is always decided by the LLM ultimately. 
+
+![MCP - Surroundings](/assets/images/lecture1/sequencediagram_mcp_flow_llm_mcp_client_mcp_service.png
 
 ---
 
 ## Key-takeaway : MCP is also both a contract and a protocol
+
+
 
 It is important to define and limit of what a LLM can reach and define a contract that defines which tools, (data) resources and other capabilities that a LLM can access.
 
