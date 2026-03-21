@@ -29,7 +29,13 @@ title: Programmatic MCP Demo - Overview of MCP
 
 ### MCP Architecture — Systems View
 
-MCP is a standardized interface that enables AI applications to interact with a wide variety of data sources and tools in a consistent way. 
+MCP is a standardized interface that enables AI applications to interact with a wide variety of both local and remote data sources and tools in a consistent way. 
+
+An overview of an Application using AI running an _Application Host Process_ and a diagram showing the clean boundaries are shown below. 
+
+<a href="https://modelcontextprotocol.io/specification/2025-11-25/architecture" target="_blank">https://modelcontextprotocol.io/specification/2025-11-25/architecture</a>
+
+![Application host process - MCP - Clean boundaries](/assets/images/lecture1/applicationhostprocessaimcpintro.png)
 
 Communication can be done in two main means of communication:
 
@@ -39,13 +45,46 @@ Communication can be done in two main means of communication:
 
 MCP is a protocol and a contract that allows language models to connect to tools and data sources. 
 
-The following systems view diagram puts MCP in the middle as a connector between the LLMs in an AI system and possibly multiple data sources. 
 
-## Key points about the MCP and LLM relationship and role division
+## Key point about the MCP and LLM relationship and role division
 
 🔷 **LLM and MCP. Orchestrator vs Connector.**
  MCP is the connector between LLM and data sources and tools (plus more) and LLM is the orchestrator and takes the decisions.
 
+ ---
+
+### Key point about the payload of web based forms of communication in MCP - Streamable HTTP and older used Serverside events (SSE) 
+
+🔷 **MCP Payload - Streamable HTTP or Serverside Events (SSE)**
+- MCP uses Json-RPC as the payload format for both Streamable HTTP and Serverside Events (SSE) communication. Json-RPC is a lightweight remote procedure call (RPC) protocol encoded in JSON. It allows for simple and efficient communication between clients and servers, making it well-suited for the needs of MCP.
+- Json-RCP messages can be request, response, error, notification. 
+- The underlying communication allows full duplex communication, meaning that both the client and server can send messages independently of each other. This is important for real-time interactions and allows for a more dynamic and responsive experience when using MCP.
+
+- Example Json-RPC request message
+
+```json
+{
+  jsonrpc: "2.0";
+  id: string | number;
+  method: string;
+  params?: {
+    [key: string]: unknown;
+  };
+}
+```
+
+- Example Json-RCP response message
+```json
+{
+  jsonrpc: "2.0";
+  id: string | number;
+  result: {
+    [key: string]: unknown;
+  }
+}
+```
+
+---
 
 Let's also consider how the LLM will provide information (parameters) to a tool or resources using MCP. 
 
@@ -92,7 +131,7 @@ The following UML sequence diagram (PlantUML 2.0 Dialect used here) shows the in
 
 ---
 
-## Key-points about the different the central participants in the architecture of MCP and LLMs 
+### Key-points about the different the central participants in the architecture of MCP and LLMs 
 
 🔷 **MCP is both a contract and a protocol**
  MCP is also both a contract and a protocol. It is an Open Source standard that allows multiple vendors to implement the protocol and contract in their own way, but still be able to interoperate with each other.
