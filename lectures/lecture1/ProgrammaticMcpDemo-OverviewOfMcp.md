@@ -96,7 +96,7 @@ The following UML sequence diagram (PlantUML 2.0 Dialect used here) shows the in
 - Coordinates LLM and MCP client
 
 🔷 **LLM**
-- Iniated by the application on behalf of user
+- Initiated by the application on behalf of user
 - Handles the overall natural language understanding and decision making
 - Processing user input and given context
 
