@@ -33,7 +33,7 @@ MCP is a standardized interface that enables AI applications to interact with a 
 
 MCP is a protocol and a contract that allows language models to connect to tools and data sources. 
 
-The following systems view diagram puts MCP in the middle as a connector between the LLMs in a AIs system and possible multiple data source. 
+The following systems view diagram puts MCP in the middle as a connector between the LLMs in an AI system and possibly multiple data sources. 
 
 ## Key points about the MCP and LLM relationship and role division
 
@@ -52,7 +52,7 @@ The MCP runtime does not decide values — it only exposes the schema. The LLM d
 
 The protocol can be read about in more detail at the web site : 
 
-[https://modelcontextprotocol.io](https://modelcontextprotocol.io)
+<a href="https://modelcontextprotocol.io" target="_blank">https://modelcontextprotocol.io</a>
 
 
 ## MCP environment and overall architecture
@@ -62,7 +62,7 @@ The protocol can be read about in more detail at the web site :
 
 The _Basic MCP Client/Server Architecture_ is shown in the diagram below, showing how a user can via an agent of an AI application contact a MCP server via an MCP client. 
 
-Important - The LLM will actively decide via input from the User and given context which tools to call from which MCP servers using MCP client, which will contact a MCP server. There can be multiple MCP servers that offers differents tools, resources and prompts. 
+Important - The LLM will actively decide via input from the User and given context which tools to call from which MCP servers using MCP client, which will contact a MCP server. There can be multiple MCP servers that offer different tools, resources and prompts. 
 
 ### MCP - Basic Client/Server architecture
 
@@ -70,7 +70,7 @@ Important - The LLM will actively decide via input from the User and given conte
 
 It is easy to mix up the different layers and components in the architecture. It is multiple tiers and layers in the architecture, but the key takeaway is that MCP is the connector between LLM and data sources and tools (plus more) and LLM is the orchestrator and takes the decisions.
 
-The following sequence diagram shows how the responsobility are divided between the different components in the architecture. The LLM is the orchestrator and takes the decisions about which tool to call and what parameters to fill in, while MCP is the connector that allows the LLM to access the tools and data sources.
+The following sequence diagram shows how the responsibility is divided between the different components in the architecture. The LLM is the orchestrator and takes the decisions about which tool to call and what parameters to fill in, while MCP is the connector that allows the LLM to access the tools and data sources.
 
 # MCP - Sequence diagram of the interactions between the different main components
 

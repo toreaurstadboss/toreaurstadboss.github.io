@@ -18,7 +18,7 @@ title: Programmatic MCP Demo - MCP Metadata with Swagger
 This part shows how to expose MCP metadata in Swagger and retrieve metadata in JSON-RPC style.
 
 Source post (from my Blogger website Coding Grounds):
-- [Metadata retrieval and debugging MCP servers](https://toreaurstad.blogspot.com/2025/11/metadata-retrieval-and-debugging-mcp.html)
+- <a href="https://toreaurstad.blogspot.com/2025/11/metadata-retrieval-and-debugging-mcp.html" target="_blank">Metadata retrieval and debugging MCP servers</a>
 
 ## 1) Enable Swagger in Program.cs
 
@@ -104,8 +104,8 @@ The core JSON-RPC shape is:
 ```
 
 JSON-RPC/MCP references:
-- [modelcontextprotocol.io](https://modelcontextprotocol.io)
-- [MCP specification](https://modelcontextprotocol.io/specification/)
+- <a href="https://modelcontextprotocol.io" target="_blank">modelcontextprotocol.io</a>
+- <a href="https://modelcontextprotocol.io/specification/" target="_blank">MCP specification</a>
 
 ## Screenshots
 

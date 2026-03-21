@@ -15,9 +15,9 @@ title: Programmatic MCP Demo - Intro to MCP Demo
 
 # Intro to MCP Demo
 
-## The MCP Demo : Yr weather service using Model Context Protcol
+## The MCP Demo : Yr weather service using Model Context Protocol
 
->The demo is a simple weather service that uses Yr web >services to provide weather information.
+>The demo is a simple weather service that uses Yr web services to provide weather information.
 
 **What we will build**
 
@@ -57,15 +57,15 @@ We can with for example Swagger present metadata information about the tools tha
 
 The Github repo is publicly available here for those who want to explore the code and try it out themselves:
 
-[https://github.com/toreaurstadboss/WeatherMCPDemo](https://github.com/toreaurstadboss/WeatherMCPDemo)
+<a href="https://github.com/toreaurstadboss/WeatherMCPDemo" target="_blank">https://github.com/toreaurstadboss/WeatherMCPDemo</a>
 
 Note that to run the demo, you must have an account at Anthropic web site and set up an API key here:
 
-[https://console.anthropic.com/dashboard](https://console.anthropic.com/dashboard)
+<a href="https://console.anthropic.com/dashboard" target="_blank">https://console.anthropic.com/dashboard</a>
 
 It is possible to pay as you use to test out Anthropic LLMs. I paid 20 dollars a year ago and still have not spent all of it. And this includes a lot of testing and playing around using the Anthropic Claude service in the demos I have written.
 
-The model I have been using while testing is _claude-3-haiku-20240307_. It is some months since I worked most with the demo and I expect **newer Claude** models should be possible to test of course.
+The model I have been using while testing is _claude-3-haiku-20240307_. It is some months since I worked most with the demo and I know **newer Claude** models are available now and suggested for those who wants to test out the demo themselves.
 
 <div class="lecture-pager">
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-OverviewOfMcp.html">← Previous: Overview of MCP</a>

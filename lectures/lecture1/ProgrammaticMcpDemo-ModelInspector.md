@@ -18,7 +18,7 @@ title: Programmatic MCP Demo - Model Context Inspector
 From the same blog post, we can also inspect MCP metadata and tools interactively using Model Context Inspector.
 
 Source post:
-- [Metadata retrieval and debugging MCP servers](https://toreaurstad.blogspot.com/2025/11/metadata-retrieval-and-debugging-mcp.html)
+- <a href="https://toreaurstad.blogspot.com/2025/11/metadata-retrieval-and-debugging-mcp.html" target="_blank">Metadata retrieval and debugging MCP servers</a>
 
 ## Run Inspector with npx
 

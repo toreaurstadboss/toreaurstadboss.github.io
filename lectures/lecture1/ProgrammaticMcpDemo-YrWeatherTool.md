@@ -23,14 +23,14 @@ We also use async here since we communicate with the remote service.
 
 It is an enlightening experience to debug the serverside to watch how the LLM uses the tools given.
 
-When debugging, you will find that if a relevant question that fullfils the conditions for the tool to be used and contacted by MCP from the client using an LLM and the given context will provide the information given to the parameters of the method for the tool.
+When debugging, you will find that if a relevant question that fulfills the conditions for the tool to be used and contacted by MCP from the client using an LLM and the given context will provide the information given to the parameters of the method for the tool.
 
 - When I ask about the weather for a given place, the description of the Yr weather tools shown below, provides the location given in the context. 
 
 - If the location is in United States, another third tool is used by the way
 
 - The _Yr weather tool_ has multiple parameters. I have only given a description for the **place** parameter, but it is specific enough to give enough context to make it work for the other parameters that will get parameters from MCP / LLM in tandem. 
-- The _Nominatim_ tool receives the place from the context given (via he question the client asked for weather for a given _place_). The tool returns the latitude and longitude via the OpenStreetMap Nominatim API service
+- The _Nominatim_ tool receives the place from the context given (via the question the client asked for weather for a given _place_). The tool returns the latitude and longitude via the OpenStreetMap Nominatim API service
 - When we have the place, the latitude and longitude and hopefully a good enough question from the client to establish which time window we want to know the weather, we can find the weather. 
 - There are some additional parameters here such as IHttpClientFactory and ILogger and those are injected via ASP.NET dependency injection as usual
 

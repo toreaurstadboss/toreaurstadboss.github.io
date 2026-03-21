@@ -17,7 +17,7 @@ title: Programmatic MCP Demo - Serverside of MCP Demo
 
 ### Serverside of the MCP Demo - WeatherServer.Web.Http
 
-First off, I have used the following Nuget's. It probably are some newer versions of these packages, they worked with .NET 10 Target framework when I tested it out.
+First off, I have used the following NuGet packages. There are probably some newer versions of these packages, they worked with .NET 10 Target framework when I tested it out.
 
 **WeatherServer.Web.Http.csproj Nuget packages:**
 ```xml
@@ -64,7 +64,7 @@ _.WithToolsFromAssembly()_ to add ALL MCP tools in an assembly (project).
 
 I wanted also to be able to run the Server side using Swagger and chat with the Server itself, so a client for the server is actually also set up here.
 
-In addition to support HTTPS traffic as required for _SSE_ I set up a Powershell script in the repo to create a self-signed certificate and set up Kestrel to use it. Please note that the demo works best using Firefox browser as self-signed certificates become a bit tricky to do right in Chrome and Edge.
+To support HTTPS traffic as required for _SSE_, I set up a PowerShell script in the repo to create a self-signed certificate and set up Kestrel to use it. Please note that the demo works best using Firefox browser as self-signed certificates become a bit tricky to do right in Chrome and Edge.
 
 ### Misc setup for serverside to support HTTPS self signed cert and MCP client
 
