@@ -159,6 +159,109 @@ public sealed class YrTools
 }
 ```
 
+The tool got some processing logic to extract the relevant information from the Yr API response and format it in a way that is useful for the client. 
+
+I have selected the most relevant weather information that Yr offers (it offers a lot of information). 
+
+```csharp
+
+private static List<YrWeatherInfoItem> GetInformationForTimeSeries(JsonElement.ArrayEnumerator timeseries, bool onlyFirst)
+{
+    var result = new List<YrWeatherInfoItem>();
+
+    foreach (var timeseriesItem in timeseries)
+    {
+        var currentWeather = timeseriesItem;
+        var currentWeatherData = currentWeather.GetProperty("data");
+        var instant = currentWeatherData.GetProperty("instant");
+        string? nextOneHourWeatherSymbol = null;
+        double? nextOneHourPrecipitationAmount = null;
+        if (currentWeatherData.TryGetProperty("next_1_hours", out JsonElement nextOneHours))
+        {
+            nextOneHourWeatherSymbol = nextOneHours.GetProperty("summary").GetProperty("symbol_code").GetString();
+            nextOneHourPrecipitationAmount = nextOneHours.GetProperty("details").GetProperty("precipitation_amount").GetDouble();
+        }
+
+        string? nextSixHourWeatherSymbol = null;
+        double? nextSixHourPrecipitationAmount = null;
+        if (currentWeatherData.TryGetProperty("next_6_hours", out JsonElement nextSixHours))
+        {
+            nextSixHourWeatherSymbol = nextSixHours.GetProperty("summary").GetProperty("symbol_code").GetString();
+            nextSixHourPrecipitationAmount = nextSixHours.GetProperty("details").GetProperty("precipitation_amount").GetDouble();
+        }
+
+        string? nextTwelveHourWeatherSymbol = null;
+        if (currentWeatherData.TryGetProperty("next_12_hours", out JsonElement nextTwelveHours))
+        {
+            nextTwelveHourWeatherSymbol = nextTwelveHours.GetProperty("summary").GetProperty("symbol_code").GetString();
+        }
+
+        string timeRaw = currentWeather.GetProperty("time").GetString()!;
+        DateTime parsedDate = DateTime.Parse(timeRaw, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal);
+        var instantDetails = instant.GetProperty("details");
+
+        var airPressureAtSeaLevel = instantDetails.GetProperty("air_pressure_at_sea_level");
+        var airTemperature = instantDetails.GetProperty("air_temperature");
+        var cloudAreaFraction = instantDetails.GetProperty("cloud_area_fraction");
+        var relativeHumidity = instantDetails.GetProperty("relative_humidity");
+        var windFromDirection = instantDetails.GetProperty("wind_from_direction");
+        var windSpeed = instantDetails.GetProperty("wind_speed");
+
+        var weatherItem = new YrWeatherInfoItem
+        {
+            AirPressureAtSeaLevel = airPressureAtSeaLevel.GetDouble(),
+            AirTemperature = airTemperature.GetDouble(),
+            CloudAreaFraction = cloudAreaFraction.GetDouble(),
+            RelativeHumidity = relativeHumidity.GetDouble(),
+            WindFromDirection = windFromDirection.GetDouble(),
+            WindSpeed = windSpeed.GetDouble(),
+            Time = parsedDate,
+            NextHourPrecipitationAmount = nextOneHourPrecipitationAmount,
+            NextHourWeatherSymbol = nextOneHourWeatherSymbol,
+            NextSixHoursPrecipitationAmount = nextSixHourPrecipitationAmount,
+            NextSixHoursWeatherSymbol = nextOneHourWeatherSymbol,
+            NextTwelveHoursWeatherSymbol = nextTwelveHourWeatherSymbol
+        };
+
+        result.Add(weatherItem);
+
+        if (onlyFirst)
+        {
+            break;
+        }
+    }
+
+    return result;
+}
+
+```
+
+- As the code shows above we use the class *YrWeatherInfoItem*.
+To make the LLM able to read out the data, I override _ToString()_ to return a more structured response, still in a string. It resembles Json, but it is not Json. It is a structured string that the LLM can read and understand.
+
+```csharp
+        public override string ToString()
+        {
+            return
+$@"""
+Time = {Time},
+AirpressureAtSeaLevel = {AirPressureAtSeaLevel},
+AirTemperature = {AirTemperature},
+CloudAreaFraction = {CloudAreaFraction},
+RelativeHumidity = {RelativeHumidity},
+WindFromDirection = {WindFromDirection},
+WindSpeed = {WindSpeed}
+NextHourWeatherSymbol = {NextHourWeatherSymbol}
+NextHourPrecipitationAmount = {NextHourPrecipitationAmount}
+NextSixHoursWeatherSymbol = {NextSixHoursWeatherSymbol}
+NextSixHoursPrecipitationAmount = {NextSixHoursPrecipitationAmount}
+NextTwelveHoursWeatherSymbol = {NextTwelveHoursWeatherSymbol}
+""";
+        } //tostring override
+
+```
+
+
 <div class="lecture-pager">
     <a href="/lectures/lecture1/ProgrammaticMcpDemo-NominatimTool.html">← Previous: Nominatim Tool</a>
     <a href="/lectures/lecture1/ProgrammaticMcpDemo-MetadataJsonRpc.html">Next: MCP Metadata (JSON-RPC) →</a>
