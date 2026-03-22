@@ -65,12 +65,8 @@ Note that to run the demo, you must have an account at Anthropic web site and se
 
 It is possible to pay as you use to test out Anthropic LLMs. I paid 20 dollars a year ago and still have not spent all of it. And this includes a lot of testing and playing around using the Anthropic Claude service in the demos I have written.
 
-The model I have been using while testing is _claude-3-haiku-20240307_. It is some months since I worked most with the demo and I know **newer Claude** models are available now and suggested for those who wants to test out the demo themselves.
-
-<div class="lecture-pager">
-  <a href="/lectures/lecture1/ProgrammaticMcpDemo-OverviewOfMcp.html">← Previous: Overview of MCP</a>
-  <a href="/lectures/lecture1/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Next: Serverside of MCP Demo →</a>
-</div>
+### Prize $$$ vs complexity/performance of different Claude models
+The model I have been using while testing is _claude-3-haiku-20240307_. It is some months since I worked most with the demo and I know **newer Claude** models are available now and suggested for those who wants to test out the demo themselves. There are newer models, but bear in mind that these **Claude** models are more expensive to use (3x).
 
 ### Video of the demo in use
 
@@ -84,3 +80,9 @@ The video demonstrates how the demo works and how it uses the MCP protocol to pr
   Your browser does not support the HTML5 video element.
 </video> 
 
+
+
+<div class="lecture-pager">
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-OverviewOfMcp.html">← Previous: Overview of MCP</a>
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Next: Serverside of MCP Demo →</a>
+</div>
