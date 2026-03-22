@@ -22,12 +22,14 @@ First off, I have used the following NuGet packages. There are probably some new
 **WeatherServer.Web.Http.csproj Nuget packages:**
 ```xml
 <ItemGroup>
-	<PackageReference Include="ModelContextProtocol.AspNetCore" Version="0.3.0-preview.2" />
-	<PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.5" />
-	<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.1.5" />
-	<PackageReference Include="ModelContextProtocol" Version="0.3.0-preview.2" />
-	<PackageReference Include="Anthropic.SDK" Version="5.5.1" />
-	<PackageReference Include="Microsoft.Extensions.AI" Version="10.4.0" />
+<PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.3" />
+<PackageReference Include="Microsoft.Extensions.Http" Version="10.0.3" />
+<PackageReference Include="ModelContextProtocol.AspNetCore" Version="1.1.0" />
+<PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.5" />
+<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.1.5" />
+<PackageReference Include="ModelContextProtocol" Version="1.1.0" />
+<PackageReference Include="Anthropic.SDK" Version="5.10.0" />
+<PackageReference Include="Microsoft.Extensions.AI" Version="10.3.0" />
 </ItemGroup>
 ```
 
@@ -136,7 +138,7 @@ builder.Services.AddChatClient(_ =>
         .Build());
 
 // ..
-app.MapMcp("/sse"); // SSE endpoint at /sse
+app.MapMcp("/mcp"); 
 ```
 
 <div class="lecture-pager">
