@@ -35,13 +35,13 @@ npx @modelcontextprotocol/inspector --startup-url "https://localhost:7145/mcp"
 
 Inside Inspector, use:
 - Transport Type: Streamable HTTP
-- URL: `https://localhost:7145/sse`
+- URL: `https://localhost:7145/mcp`
 - Connection Type: Via Proxy
 
-The SSE endpoint on server side is:
+The MCP endpoint on server side is:
 
 ```csharp
-app.MapMcp("/sse"); // This exposes the SSE endpoint at /sse
+app.MapMcp("/mcp"); // This exposes the SSE endpoint at /sse
 ```
 
 ## Screenshot

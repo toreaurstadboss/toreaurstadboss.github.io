@@ -39,9 +39,22 @@ An overview of an Application using AI running an _Application Host Process_ and
 
 Communication can be done in two main means of communication:
 
-- 🔷 **Streamable HTTP**: A transport protocol that allows for real-time, bidirectional communication between the client and server. It is designed to handle large volumes of data and can be used for applications that require low latency and high throughput
+- 🔷 **Streamable HTTP**: A transport protocol that allows for real-time, bidirectional communication between the client and server. It is designed to handle large volumes of data and can be used for applications that require low latency and high throughput.
+- Bidirectional communication is achieved using a single HTTP connection that remains open for the duration of the communication session. This allows for efficient data transfer and reduces the overhead associated with establishing multiple connections.
 - 🔷 **STDIO**: Standard I/O communication via a keyboard outputted to the console.
-- 🔷 **SSE - Server side events**: Not so much in use any longer. The demo I will show makes use of SSE by the way. Streamable HTTP has taken over for SSE as it is more reliable. There are some challenges with SSE such as with load balancers, proxy performance, CORS, authentication. The demo will show SSE, but streamable HTTP is what is actually being used most now, besides STDIO. 
+- 🔷 **SSE - Server side events**: Establishes two HTTP connections for both sending client requests and a persistent connection to send responses. There are multiple challenges with SSE - such as with load balancers, proxy performance, CORS, authentication. And added overhead in managing two HTTP connections.
+
+This has resulted in SSE now being deprecated in MCP in favor of Streamable HTTP. 
+
+_The reason SSE was phased out in favor of Streamable HTTP is detailed in this good blog post by Turkish software developer Fatih Kadir Akin._
+
+#### Blog post about choice of SSE deprecation in MCP and move over to Streamabe HTTP :
+<a href="https://blog.fka.dev/blog/2025-06-06-why-mcp-deprecated-sse-and-go-with-streamable-http/" target="_blank">
+https://blog.fka.dev/blog/2025-06-06-why-mcp-deprecated-sse-and-go-with-streamable-http/
+</a>
+<br /><br />
+
+The demo shown in the next lectures uses Streamable HTTP, which is the recommended transport for production use as of current. 
 
 MCP is a protocol and a contract that allows language models to connect to tools and data sources. 
 
