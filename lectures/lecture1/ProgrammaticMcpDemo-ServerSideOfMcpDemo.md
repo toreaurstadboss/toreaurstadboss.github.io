@@ -17,7 +17,7 @@ title: Programmatic MCP Demo - Serverside of MCP Demo
 
 ### Serverside of the MCP Demo - WeatherServer.Web.Http
 
-First off, I have used the following NuGet packages. There are probably some newer versions of these packages, they worked with .NET 10 Target framework when I tested it out.
+First off, I have used the following NuGet packages. I have recently updated the Demo to use .NET 10 and moved from using SSE to Streamable HTTP and verified that it still works after the upgrades.
 
 **WeatherServer.Web.Http.csproj Nuget packages:**
 ```xml
@@ -66,66 +66,32 @@ _.WithToolsFromAssembly()_ to add ALL MCP tools in an assembly (project).
 
 I wanted also to be able to run the Server side using Swagger and chat with the Server itself, so a client for the server is actually also set up here.
 
-To support HTTPS traffic as required for _SSE_, I set up a PowerShell script in the repo to create a self-signed certificate and set up Kestrel to use it. Please note that the demo works best using Firefox browser as self-signed certificates become a bit tricky to do right in Chrome and Edge.
+Further MCP setup is done in `Program.cs` 
 
-### Misc setup for serverside to support HTTPS self signed cert and MCP client
+```csharp 
+  builder.Services.Configure<McpClientOptions>(options =>
+  {
+      builder.Configuration.GetSection("McpClient");
+  });
 
-```csharp
-builder.Services.Configure<McpClientOptions>(options =>
-{
-    builder.Configuration.GetSection("McpClient");
-});
+  var mcpEndpoint = builder.Configuration.GetSection("McpClient:Endpoint").Value;
 
-// Setup SSL certificate (optional)
-var subjectName = builder.Configuration["McpServer:CertificateSettings:SubjectName"];
+  builder.Services.AddSingleton<McpClient>(_ =>
+  {
+      return McpClient.CreateAsync(
+          new HttpClientTransport(new HttpClientTransportOptions
+          {
+              Endpoint = new Uri(mcpEndpoint!),
+              TransportMode = HttpTransportMode.StreamableHttp
+          })
+      ).GetAwaiter().GetResult();
+  });
 
-var portnumberMcp = builder.Configuration.GetValue("McpServer:Port", 7145);
-
-// Only force a specific certificate if SubjectName is configured.
-// Otherwise, let ASP.NET Core use the standard development certificate.
-if (!string.IsNullOrWhiteSpace(subjectName))
-{
-    builder.WebHost.ConfigureKestrel(options =>
-    {
-        options.ListenLocalhost(portnumberMcp, listenOptions =>
-        {
-            using var store = new X509Store(StoreName.My, StoreLocation.LocalMachine);
-            store.Open(OpenFlags.ReadOnly);
-
-            var certs = store.Certificates.Find(
-                X509FindType.FindBySubjectName,
-                subjectName,
-                validOnly: false);
-
-            var certificate = certs.FirstOrDefault();
-            if (certificate == null)
-            {
-                throw new InvalidOperationException($"Certificate not found in LocalMachine\\My. SubjectName='{subjectName}'.");
-            }
-
-            listenOptions.UseHttps(certificate);
-        });
-    });
-}
-
-var mcpEndpoint = builder.Configuration.GetSection("McpClient:Endpoint").Value;
-
-builder.Services.AddSingleton<IMcpClient>(_ =>
-{
-    return McpClientFactory.CreateAsync(
-        new SseClientTransport(
-            new SseClientTransportOptions
-            {
-                Endpoint = new Uri(mcpEndpoint!)
-            }
-        )).GetAwaiter().GetResult();
-});
-
-builder.Services.Configure<ModelContextProtocol.Protocol.Implementation>(options =>
-{
-    options.Title = "WeatherMcpDemoServer";
-    options.Version = "1.1";
-});
+  builder.Services.Configure<ModelContextProtocol.Protocol.Implementation>(options =>
+  {
+      options.Title = "WeatherMcpDemoServer";
+      options.Version = "1.2"; 
+  });
 ```
 
 We also do more setup with the chat client here, passing in the ANTHROPIC_API_KEY from environment variable and setting up the model to use for chat completions.

@@ -15,4 +15,4 @@ https://toreaurstadboss.github.io/
 * [Lecture 1 - Programmatic MCP Demo](lectures/lecture1/ProgrammaticMcpDemo.md)
 
 
-![Professor Lecturer at Cats University](assets/images/professor_lecturer_cats_university.png)
+<img src="assets/images/professor_lecturer_cats_university.png" width="600" alt="Professor Catiana Doges" />

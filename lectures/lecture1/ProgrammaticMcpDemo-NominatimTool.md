@@ -39,6 +39,8 @@ builder.Services.AddHttpClient(WeatherServerApiClientNames.OpenStreetmapApiClien
 - Looking up latitude and longitude from a geographical place is done with the tool presented below. The tool is using the Nominatim API from OpenStreetMap to look up the latitude and longitude of a given place.
 - Please observe that the tool defines one parameter, which is the place to look up. The parameter is decorated with a Description attribute, this is used to generate metadata about the tool and its parameters which can be used by clients to understand how to use the tool. This is part of the contract of the MCP protocol.
 - The tool is defined inside a sealed class that is decorated with the [McpServerToolType] attribute, this is used to register the tool with the MCP server and to generate metadata about the tool type.
+- Observe that the tool returns a string with the latitude and longitude of the place looked up. This is not structured in a way that you usually see in programming, by returning a interpolated string with the results (latitude and longitude).
+- The LLM will interpret the returned string and extract the latitude and longitude values from it. This is a common pattern when working with LLMs, where the output is not always structured data but can be a natural language response that contains the information needed.
 
 ```csharp
 namespace WeatherServer.Tools;

@@ -78,7 +78,7 @@ The video demonstrates how the demo works and how it uses the MCP protocol to pr
 <video controls width="100%" style="max-width: 900px; display: block; margin: 1rem 0;">
   <source src="/assets/videos/WeatherDemoMarch2026.mp4" type="video/mp4">
   Your browser does not support the HTML5 video element.
-</video> 
+</video>  
 
 
 

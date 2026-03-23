@@ -129,4 +129,4 @@ Here I used JsonCrack to watch Json online to watch the different metadata about
 <div class="lecture-pager">
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-YrWeatherTool.html">← Previous: Yr weather Tool</a>
     <a href="/lectures/lecture1/ProgrammaticMcpDemo-ModelInspector.html">Next: Model Context Inspector →</a>
-</div>
+</div> 

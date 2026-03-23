@@ -95,7 +95,7 @@ MCP is a protocol and a contract that allows language models to connect to tools
     [key: string]: unknown;
   }
 }
-```
+``` 
 
 **MCP uses Json-RCP 2.0 standard and extends this**
 

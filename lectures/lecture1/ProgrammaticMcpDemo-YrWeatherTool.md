@@ -238,7 +238,7 @@ private static List<YrWeatherInfoItem> GetInformationForTimeSeries(JsonElement.A
 
 - As the code shows above we use the class *YrWeatherInfoItem*.
 To make the LLM able to read out the data, I override _ToString()_ to return a more structured response, still in a string. It resembles Json, but it is not Json. It is a structured string that the LLM can read and understand.
-
+ 
 ```csharp
         public override string ToString()
         {

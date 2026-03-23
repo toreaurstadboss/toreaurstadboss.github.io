@@ -14,7 +14,7 @@ This lecture is split into multiple pages.
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-NominatimTool.html">4. Nominatim Tool</a>
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-YrWeatherTool.html">5. Yr weather Tool</a>
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-MetadataJsonRpc.html">6. MCP Metadata (JSON-RPC)</a>
-  <a href="/lectures/lecture1/ProgrammaticMcpDemo-ModelInspector.html">7. Model Context Inspector</a>
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-ModelInspector.html">7. Model Context Inspector</a> 
 </div>
 
 ## Quick navigation

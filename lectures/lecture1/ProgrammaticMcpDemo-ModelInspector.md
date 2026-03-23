@@ -30,7 +30,7 @@ If local self-signed TLS gives issues in local dev, I used this temporary workar
 
 ```powershell
 $env:NODE_TLS_REJECT_UNAUTHORIZED=0
-npx @modelcontextprotocol/inspector --startup-url "https://localhost:7145/mcp"
+npx @modelcontextprotocol/inspector --startup-url "https://localhost:7145/mcp" 
 ```
 
 Inside Inspector, use:
