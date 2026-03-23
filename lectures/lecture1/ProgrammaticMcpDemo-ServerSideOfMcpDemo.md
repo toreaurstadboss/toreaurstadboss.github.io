@@ -9,6 +9,7 @@ title: Programmatic MCP Demo - Serverside of MCP Demo
     <a href="ProgrammaticMcpDemo-ServerSideOfMcpDemo.html" aria-current="page">Serverside of MCP Demo</a>
     <a href="ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
     <a href="ProgrammaticMcpDemo-YrWeatherTool.html">Yr weather Tool</a>
+    <a href="ProgrammaticMcpDemo-ChatController.html">MCP Client (ChatController)</a>
     <a href="ProgrammaticMcpDemo-MetadataJsonRpc.html">MCP Metadata (JSON-RPC)</a>
     <a href="ProgrammaticMcpDemo-ModelInspector.html">Model Context Inspector</a>
 </div>

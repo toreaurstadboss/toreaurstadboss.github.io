@@ -9,6 +9,7 @@ title: Programmatic MCP Demo - Model Context Inspector
   <a href="ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Serverside of MCP Demo</a>
   <a href="ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
   <a href="ProgrammaticMcpDemo-YrWeatherTool.html">Yr weather Tool</a>
+  <a href="ProgrammaticMcpDemo-ChatController.html">MCP Client (ChatController)</a>
   <a href="ProgrammaticMcpDemo-MetadataJsonRpc.html">MCP Metadata (JSON-RPC)</a>
   <a href="ProgrammaticMcpDemo-ModelInspector.html" aria-current="page">Model Context Inspector</a>
 </div>

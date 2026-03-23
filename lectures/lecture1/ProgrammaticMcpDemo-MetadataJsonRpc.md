@@ -9,6 +9,7 @@ title: Programmatic MCP Demo - MCP Metadata with Swagger
   <a href="ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">Serverside of MCP Demo</a>
   <a href="ProgrammaticMcpDemo-NominatimTool.html">Nominatim Tool</a>
   <a href="ProgrammaticMcpDemo-YrWeatherTool.html">Yr weather Tool</a>
+  <a href="ProgrammaticMcpDemo-ChatController.html">MCP Client (ChatController)</a>
   <a href="ProgrammaticMcpDemo-MetadataJsonRpc.html" aria-current="page">MCP Metadata (JSON-RPC)</a>
     <a href="ProgrammaticMcpDemo-ModelInspector.html">Model Context Inspector</a>
 </div>
@@ -127,6 +128,6 @@ Here I used JsonCrack to watch Json online to watch the different metadata about
 - This makes debugging and documenting MCP server capabilities much easier.
 
 <div class="lecture-pager">
-  <a href="/lectures/lecture1/ProgrammaticMcpDemo-YrWeatherTool.html">← Previous: Yr weather Tool</a>
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-ChatController.html">← Previous: MCP Client (ChatController)</a>
     <a href="/lectures/lecture1/ProgrammaticMcpDemo-ModelInspector.html">Next: Model Context Inspector →</a>
 </div> 

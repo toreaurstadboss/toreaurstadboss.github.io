@@ -13,8 +13,9 @@ This lecture is split into multiple pages.
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-ServerSideOfMcpDemo.html">3. Serverside of MCP Demo</a>
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-NominatimTool.html">4. Nominatim Tool</a>
   <a href="/lectures/lecture1/ProgrammaticMcpDemo-YrWeatherTool.html">5. Yr weather Tool</a>
-  <a href="/lectures/lecture1/ProgrammaticMcpDemo-MetadataJsonRpc.html">6. MCP Metadata (JSON-RPC)</a>
-  <a href="/lectures/lecture1/ProgrammaticMcpDemo-ModelInspector.html">7. Model Context Inspector</a> 
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-ChatController.html">6. MCP Client (ChatController)</a>
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-MetadataJsonRpc.html">7. MCP Metadata (JSON-RPC)</a>
+  <a href="/lectures/lecture1/ProgrammaticMcpDemo-ModelInspector.html">8. Model Context Inspector</a> 
 </div>
 
 ## Quick navigation
@@ -24,6 +25,7 @@ This lecture is split into multiple pages.
 - [Serverside of MCP Demo](ProgrammaticMcpDemo-ServerSideOfMcpDemo.html)
 - [Nominatim Tool](ProgrammaticMcpDemo-NominatimTool.html)
 - [Yr weather Tool](ProgrammaticMcpDemo-YrWeatherTool.html)
+- [MCP Client (ChatController)](ProgrammaticMcpDemo-ChatController.html)
 - [MCP Metadata (JSON-RPC)](ProgrammaticMcpDemo-MetadataJsonRpc.html)
 - [Model Context Inspector](ProgrammaticMcpDemo-ModelInspector.html)
 
