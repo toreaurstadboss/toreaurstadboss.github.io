@@ -13,6 +13,7 @@ https://toreaurstadboss.github.io/
 ### Choose a lecture!
 
 * [Lecture 1 - Programmatic MCP Demo](lectures/lecture1/ProgrammaticMcpDemo.md)
+* [Lecture 2 - ApiResult Monad with C# 15 Union Types](lectures/lecture2/ApiResultMonad.md)
 
 
 <img src="assets/images/professor_lecturer_cats_university.png" width="600" alt="Professor Catiana Doges" />
