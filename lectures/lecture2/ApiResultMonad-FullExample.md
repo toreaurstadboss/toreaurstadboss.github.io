@@ -4,9 +4,10 @@ title: ApiResult Monad - Full Example & Setup
 ---
 
 <div class="lecture-menu">
-  <a href="ApiResultMonad-Introduction.html">1. Introduction</a>
-  <a href="ApiResultMonad-MapAndBind.html">2. Map &amp; Bind</a>
-  <a href="ApiResultMonad-FullExample.html" aria-current="page">3. Full Example &amp; Setup</a>
+  <a href="ApiResultMonad-UnionTypes.html">1. Union Types</a>
+  <a href="ApiResultMonad-Introduction.html">2. Introduction</a>
+  <a href="ApiResultMonad-MapAndBind.html">3. Map &amp; Bind</a>
+  <a href="ApiResultMonad-FullExample.html" aria-current="page">4. Full Example &amp; Setup</a>
 </div>
 
 # Full Example &amp; Setup

@@ -4,9 +4,10 @@ title: ApiResult Monad - Introduction
 ---
 
 <div class="lecture-menu">
-  <a href="ApiResultMonad-Introduction.html" aria-current="page">1. Introduction</a>
-  <a href="ApiResultMonad-MapAndBind.html">2. Map &amp; Bind</a>
-  <a href="ApiResultMonad-FullExample.html">3. Full Example &amp; Setup</a>
+  <a href="ApiResultMonad-UnionTypes.html">1. Union Types</a>
+  <a href="ApiResultMonad-Introduction.html" aria-current="page">2. Introduction</a>
+  <a href="ApiResultMonad-MapAndBind.html">3. Map &amp; Bind</a>
+  <a href="ApiResultMonad-FullExample.html">4. Full Example &amp; Setup</a>
 </div>
 
 # Introduction
@@ -48,6 +49,6 @@ Union types are the key enabler — they let us do functional-style result chain
 Every `ApiResult<T>` is exactly one of these three — no nulls, no exceptions leaking out.
 
 <div class="lecture-pager">
-  <a href="ApiResultMonad.html">← Back to index</a>
+  <a href="ApiResultMonad-UnionTypes.html">← Union Types</a>
   <a href="ApiResultMonad-MapAndBind.html">Map &amp; Bind →</a>
 </div>
