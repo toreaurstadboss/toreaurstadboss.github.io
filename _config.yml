@@ -11,3 +11,4 @@ theme: minima
 header_pages:
   - lectures/lecture1/ProgrammaticMcpDemo.md
   - lectures/lecture2/ApiResultMonad.md
+  - lectures/lecture3/Snowstorm.md
