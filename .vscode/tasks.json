@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Serve GitHub Pages",
+      "type": "shell",
+      "command": "& '${workspaceFolder}/.vscode/Start-GitHubPages.ps1'",
+      "windows": {
+        "options": {
+          "cwd": "${workspaceFolder}",
+          "shell": { "executable": "powershell.exe", "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-Command"] }
+        }
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "jekyll",
+        "pattern": { "regexp": "^(JEKYLL_ERROR): (.*)$", "file": 1, "message": 2 },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^.*Configuration file:",
+          "endsPattern": "^\\s*Server running\\.\\.\\."
+        }
+      }
+    }
+  ]
+}

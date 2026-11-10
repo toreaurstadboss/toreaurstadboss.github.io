@@ -30,6 +30,13 @@ Invoke-RestMethod -Uri 'http://localhost:8080/imports/start-local-file-import' `
     -Method Post -ContentType 'application/json' -Body $body
 ```
 
+It is important that the import file matches the type of import you specify here. A full type needs full RF2 files. 
+
+There are three types of Rf2 files:
+- Full
+- Snapshot
+- Delta
+
 This follows the blog's full-history import. The ZIP must contain Full RF2 files. For a faster development setup, Snowstorm recommends `SNAPSHOT`; use that type with a release containing Snapshot files. See [Snowstorm's loading guide](https://github.com/IHTSDO/snowstorm/blob/master/docs/loading-snomed.md).
 
 Imports can take a long time, especially for full history. Watch the container logs and wait for completion or errors before querying. Use a fresh instance and the appropriate branch for your edition.

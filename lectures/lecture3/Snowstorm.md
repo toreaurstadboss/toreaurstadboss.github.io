@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Local Snowstorm Server
+title: Local Snowstorm CT Server
 ---
 
 # Local Snowstorm SNOMED CT Server

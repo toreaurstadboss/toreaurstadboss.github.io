@@ -52,3 +52,8 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Jekyll output and local Bundler settings
+_site/
+.jekyll-cache/
+.bundle/
